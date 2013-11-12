@@ -53,7 +53,7 @@ require 'shawarma'
 
 ```ruby
 class Shawarma
-  memoize foo
+  memoize def foo
     expensive_operation
   end
 end
