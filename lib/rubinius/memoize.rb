@@ -1,5 +1,6 @@
+require 'rubinius/compiler'
 require 'rubinius/ast'
-RBX = Rubinius::ToolSet.current::TS
+
 require_relative 'memoize/transform'
 
 module Rubinius

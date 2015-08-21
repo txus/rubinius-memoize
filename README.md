@@ -1,4 +1,4 @@
-# rubinius-memoize
+# rubinius-memoize [![Build Status](https://secure.travis-ci.org/txus/rubinius-memoize.png)](http://travis-ci.org/txus/rubinius-memoize)
 
 Method memoization using [Rubinius][rubinius] AST transforms.
 

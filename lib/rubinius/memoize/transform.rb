@@ -1,6 +1,10 @@
+RBX = Rubinius::ToolSets::Runtime
+
 module Rubinius
   module Memoize
-    class Transform < RBX::AST::Send
+    include RBX::AST
+
+    class Transform < Send
       attr_accessor :meth
 
       transform :default, :memoize, "Memoization transform"

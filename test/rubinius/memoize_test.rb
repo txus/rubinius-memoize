@@ -27,8 +27,8 @@ module Rubinius
       it 'raises an ArgumentError' do
         lambda {
           klass.class_eval """
-            memoize def foo(a)
-            end
+          memoize def foo(a)
+          end
           """
         }.must_raise ArgumentError
       end
@@ -36,13 +36,13 @@ module Rubinius
 
     it 'can expire memoized methods' do
       klass.class_eval """
-        def self.counter; @counter ||= 0; end
-        def self.counter=(c); @counter = c; end
+      def self.counter; @counter ||= 0; end
+      def self.counter=(c); @counter = c; end
 
-        memoize def foo
-          self.class.counter += 1
-          3
-        end
+      memoize def foo
+        self.class.counter += 1
+        3
+      end
       """
 
       obj = klass.new

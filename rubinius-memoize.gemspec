@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "rubinius-memoize"
   spec.version       = Rubinius::Memoize::VERSION
   spec.authors       = ["Josep M. Bach"]
-  spec.email         = ["josep.m.bach@gmail.com"]
+  spec.email         = ["me@txus.io"]
   spec.description   = %q{Memoize methods through Rubinius AST transforms}
   spec.summary       = %q{Memoize methods through Rubinius AST transforms}
   spec.homepage      = "https://github.com/txus/rubinius-memoize"
@@ -19,8 +19,11 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency "rubinius-ast"
-  spec.add_development_dependency "bundler", "~> 1.3"
+  spec.add_runtime_dependency "rubinius-toolset"
+  spec.add_runtime_dependency "rubinius-compiler"
+  spec.add_development_dependency "bundler"
   spec.add_development_dependency "minitest-reporters"
+  spec.add_development_dependency 'minitest'
   spec.add_development_dependency "rubysl-singleton"
   spec.add_development_dependency "rake"
 end
